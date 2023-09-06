@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Ordering Website - Login/Signup</title>
+    <style>
+        body {
+            background: url('backimg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .container img {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        
+        .switch-form {
+            text-align: center;
+        }
+        
+        .switch-form a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="th.jpg" alt="Logo">
+        <h1>Welcome</h1>
+
+        <div id="login-form">
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+
+                <div class="switch-form">
+                    Don't have an account? <a href="#" onclick="switchForm('signup-form')">Signup here</a>
+                </div>
+            </form>
+        </div>
+
+        <div id="signup-form" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Signup</button>
+                </div>
+
+                <div class="switch-form">
+                    Already have an account? <a href="#" onclick="switchForm('login-form')">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function switchForm(formId) {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
